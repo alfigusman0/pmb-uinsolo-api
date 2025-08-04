@@ -1,2 +1,2 @@
-# pmb-uinsolo-api
-PMB Api - UIN Surakarta 
+# damba-uinsgd
+Damba - UIN Sunan Gunung Djati Bandung
