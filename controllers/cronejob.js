@@ -75,7 +75,7 @@ Controller.cj1 = async (req, res) => {
                     insertValues.push([
                         level.ids_level,
                         modul.ids_modul,
-                        level.tingkat <= 1 ? modul.aksi : 'read,single',
+                        level.tingkat <= 1 ? modul.aksi : 'create,read,update,delete,single',
                         1, // created_by
                     ]);
                     count_create++;
