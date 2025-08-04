@@ -1,17 +1,16 @@
 /* Libraries */
 const router = require('express').Router();
 /* Controller */
-const Controller = require('../../controllers/daftar/pendidikan');
+const Controller = require('../../controllers/pradaftar/daftar_tunggu');
 /* Middleware */
 const isAuth = require('../../middleware/isAuth');
-const validation = require('../../middleware/daftar/pendidikan');
+const validation = require('../../middleware/pradaftar/daftar_tunggu');
 const paramsid = require('../../middleware/params-id');
 
 router.get('/', isAuth, Controller.read);
 router.post('/', isAuth, validation, Controller.create);
 router.put('/:id', isAuth, paramsid, validation, Controller.update);
 router.delete('/:id', isAuth, paramsid, Controller.delete);
-router.delete('/id-kelulusan/:id', isAuth, paramsid, Controller.deletebyIdKelulusan);
 router.get('/single', isAuth, Controller.single);
 
 module.exports = router;

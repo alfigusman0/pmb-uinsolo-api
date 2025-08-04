@@ -1,19 +1,21 @@
 /* Helpers */
-const response = require('../../helpers/response');
+const response = require('../helpers/response');
 /* Validation */
-const validation = require('../../validation/pradaftar/file');
+const loginValidation = require('../validation/login');
 
 module.exports = async (req, res, next) => {
     /* Validation */
     let {
         errors,
         isValid
-    } = validation(req.method, req.path, req.body);
+    } = loginValidation(req.body);
     if (!isValid) {
         let message = errors;
         let json = {};
         return response.sc400(message, json, res);
     }
+
+    req.ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
     next();
 };

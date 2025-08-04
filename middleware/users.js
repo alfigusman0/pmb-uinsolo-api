@@ -1,7 +1,7 @@
 /* Helpers */
-const response = require('../../helpers/response');
+const response = require('../helpers/response');
 /* Validation */
-const validation = require('../../validation/pradaftar/file');
+const validation = require('../validation/users');
 
 module.exports = async (req, res, next) => {
     /* Validation */

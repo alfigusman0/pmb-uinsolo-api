@@ -8,7 +8,7 @@ module.exports = async (req, res, next) => {
     let {
         errors,
         isValid
-    } = validation(req.method, req.body);
+    } = validation(req.method, req.path, req.body);
     if (!isValid) {
         let message = errors;
         let json = {};

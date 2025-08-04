@@ -2,7 +2,7 @@
 const Validator = require('validator');
 const isEmpty = require('../is-empty');
 
-module.exports = function validateInput(method, data) {
+module.exports = function validateInput(method, path, data) {
     let errors = {};
 
     data.kode_program = !isEmpty(data.kode_program) ? data.kode_program : '';
