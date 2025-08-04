@@ -65,6 +65,7 @@ if (process.env.NODE_ENV === 'production') {
 const authRoutes = require('./routes/auth');
 const awsRoutes = require('./routes/aws');
 const cronejobRoutes = require('./routes/cronejob');
+const usersRoutes = require('./routes/users');
 /* Daftar */
 const fileDRoutes = require('./routes/daftar/file');
 const kelulusanDRoutes = require('./routes/daftar/kelulusan');
@@ -77,6 +78,7 @@ const sekolahDRoutes = require('./routes/daftar/sekolah');
 const uktDRoutes = require('./routes/daftar/ukt');
 /* Pradaftar */
 const biodataPRoutes = require('./routes/pradaftar/biodata');
+const daftartungguPRoutes = require('./routes/pradaftar/daftar_tunggu');
 const filePRoutes = require('./routes/pradaftar/file');
 const formulirPRoutes = require('./routes/pradaftar/formulir');
 const jadwalPRoutes = require('./routes/pradaftar/jadwal');
@@ -115,6 +117,7 @@ const settingTipeUjianRoutes = require('./routes/settings/tipe_ujian');
 router.use('/auth', authRoutes);
 router.use('/aws', awsRoutes);
 router.use('/cronejob', cronejobRoutes);
+router.use('/users', usersRoutes);
 /* Daftar */
 router.use('/daftar/file', fileDRoutes);
 router.use('/daftar/kelulusan', kelulusanDRoutes);
@@ -127,6 +130,7 @@ router.use('/daftar/sekolah', sekolahDRoutes);
 router.use('/daftar/ukt', uktDRoutes);
 /* Pradaftar */
 router.use('/pradaftar/biodata', biodataPRoutes);
+router.use('/pradaftar/daftar-tunggu', daftartungguPRoutes);
 router.use('/pradaftar/file', filePRoutes);
 router.use('/pradaftar/formulir', formulirPRoutes);
 router.use('/pradaftar/jadwal', jadwalPRoutes);
