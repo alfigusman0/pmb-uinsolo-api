@@ -29,11 +29,7 @@ module.exports = function validateInput(method, path, data) {
                     min: 10,
                     max: 10
                 })) {
-                errors.nisn = 'nisn field is number';
-            }
-
-            if (!Validator.isInt(data.nisn)) {
-                errors.nisn = 'nisn field is number';
+                errors.nisn = 'nisn has to be 10 characters';
             }
         }
 
@@ -86,11 +82,7 @@ module.exports = function validateInput(method, path, data) {
                     min: 10,
                     max: 10
                 })) {
-                errors.nisn = 'nisn field is number';
-            }
-
-            if (!Validator.isInt(data.nisn)) {
-                errors.nisn = 'nisn field is number';
+                errors.nisn = 'nisn has to be 10 characters';
             }
         }
 
